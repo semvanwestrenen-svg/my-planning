@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: Inter, sans-serif;
+  color: #f5f1e9;
+  background: #090909;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #090909;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  padding: 32px 20px;
+  background: #101010;
+  border-right: 1px solid #29231a;
+  flex-shrink: 0;
+}
+
+.sidebar h2 {
+  font-size: 21px;
+  letter-spacing: 2px;
+}
+
+.sidebar h2 span,
+.gold {
+  color: #d6b56d;
+}
+
+.subtitle {
+  color: #77716a;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+nav {
+  display: grid;
+  gap: 9px;
+  margin-top: 48px;
+}
+
+nav button {
+  border: 0;
+  border-radius: 10px;
+  padding: 14px;
+  text-align: left;
+  color: #aaa39a;
+  background: transparent;
+}
+
+nav button span {
+  margin-right: 12px;
+  color: #d6b56d;
+}
+
+nav button:hover,
+nav button.active {
+  background: #282116;
+  color: #e7c985;
+}
+
+.content {
+  flex: 1;
+  padding: 42px;
+  max-width: 1400px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+header h1 {
+  margin: 8px 0;
+  font-size: 32px;
+}
+
+.welcome {
+  padding: 38px;
+  border: 1px solid #40331e;
+  border-radius: 18px;
+  background: linear-gradient(120deg, #211b11, #111);
+}
+
+.welcome p {
+  color: #d6b56d;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.welcome h2 {
+  font-size: 32px;
+  margin: 12px 0;
+}
+
+.welcome span,
+.card p {
+  color: #89837b;
+  font-size: 13px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+  margin-top: 25px;
+}
+
+.card {
+  padding: 24px;
+  text-align: left;
+  color: #f5f1e9;
+  background: #111;
+  border: 1px solid #29231a;
+  border-radius: 15px;
+  transition: 0.2s;
+}
+
+.card:hover {
+  border-color: #d6b56d;
+  transform: translateY(-3px);
+}
+
+.card > span {
+  font-size: 24px;
+  color: #d6b56d;
+}
+
+.card h3 {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 750px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 18px;
+  }
+
+  nav {
+    display: flex;
+    overflow-x: auto;
+    margin-top: 20px;
+  }
+
+  nav button {
+    white-space: nowrap;
+  }
+
+  .content {
+    padding: 22px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome h2 {
+    font-size: 25px;
+  }
+}
